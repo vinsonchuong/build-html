@@ -1,7 +1,7 @@
 {
   "name": "build-html",
   "version": "0.0.1",
-  "description": "",
+  "description": "Compile and minify a html entry point for an application.",
   "keywords": [],
   "homepage": "https://github.com/vinsonchuong/build-html",
   "bugs": "https://github.com/vinsonchuong/build-html/issues",
@@ -13,9 +13,6 @@
     "src"
   ],
   "main": "src/index.js",
-  "bin": {
-    "build-html": "src/bin/build-html.js"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/vinsonchuong/build-html"

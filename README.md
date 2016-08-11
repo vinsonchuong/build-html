@@ -1,8 +1,7 @@
 # build-html
-[![Build Status](https://travis-ci.org/vinsonchuong/build-html.svg?branch=master)](https://travis-ci.org/vinsonchuong/build-html)
 [![Code Climate](https://codeclimate.com/github/vinsonchuong/build-html/badges/gpa.svg)](https://codeclimate.com/github/vinsonchuong/build-html)
 
-Prints Hello World!
+Compile and minify a html entry point for an application.
 
 ## Installing
 `build-html` is available as an
