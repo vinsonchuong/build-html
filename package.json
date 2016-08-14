@@ -1,5 +1,6 @@
 {
   "name": "build-html",
+  "stage": "compile",
   "version": "0.0.1",
   "description": "Compile and minify a html entry point for an application.",
   "keywords": [],
@@ -22,7 +23,8 @@
     "test": "eslint && jasmine"
   },
   "dependencies": {
-    "node-promise-es6": "^0.3.2"
+    "html-minifier": "^3.0.2",
+    "directory-helpers": "^0.1.2"
   },
   "devDependencies": {
     "dist-es6": "^0.2.3",

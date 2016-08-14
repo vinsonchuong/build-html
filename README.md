@@ -1,5 +1,5 @@
 # build-html
-[![Code Climate](https://codeclimate.com/github/vinsonchuong/build-html/badges/gpa.svg)](https://codeclimate.com/github/vinsonchuong/build-html)
+[![Build Status](https://travis-ci.org/vinsonchuong/build-html.svg?branch=master)](https://travis-ci.org/vinsonchuong/build-html)
 
 Compile and minify a html entry point for an application.
 
@@ -8,10 +8,29 @@ Compile and minify a html entry point for an application.
 [npm package](https://www.npmjs.com/package/build-html).
 
 ## Usage
+Add `build-bin` and `build-html` to the `package.json`.
+
+```json
+{
+  "name": "project",
+  "private": true,
+  "scripts": {
+    "build": "build"
+  },
+  "devDependencies": {
+    "build-bin": "^0.0.6",
+    "build-html": "^0.0.1"
+  }
+}
+```
+
 From the command line, run:
 ```bash
-build-html
+npm run build
 ```
+
+`build-html` will read `src/index.html`, minify it and save the result to
+`dist/index.html`.
 
 ## Development
 ### Getting Started
