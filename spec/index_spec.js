@@ -1,15 +1,12 @@
 import Directory from 'directory-helpers';
+import register from 'test-inject';
 
-function withProject(test) {
-  return async () => {
-    const project = new Directory('project');
-    try {
-      await test(project);
-    } finally {
-      await project.remove();
-    }
-  };
-}
+const inject = register({
+  project: {
+    setUp: () => new Directory('project'),
+    tearDown: async (project) => await project.remove()
+  }
+});
 
 describe('build-html', () => {
   it('acts during the compile stage', async () => {
@@ -18,7 +15,7 @@ describe('build-html', () => {
     expect(stage).toBe('compile');
   });
 
-  it('compiles src/index.html into dist/index.html', withProject(async (project) => {
+  it('compiles src/index.html into dist/index.html', inject(async ({project}) => {
     await project.write({
       'src/index.html': `
         <!doctype html>
